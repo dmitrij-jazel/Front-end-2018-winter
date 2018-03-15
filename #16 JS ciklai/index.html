@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" value="" id="Distance" placeholder="Atstumas..." /> 
+        <select id="FromUnit">
+            <option value="mm">mm</option>
+            <option value="cm" >cm</option>
+            <option value="m" selected>m</option>
+            <option value="km">km</option>
+        </select>
+    </div>
+    <div>
+        <button type="button" id="Conv" onclick="convert()">Convert</button>
+    </div>
+    <div>
+        <span id="result">-</span>
+        <select id="ToUnit">
+            <option value="mm">mm</option>
+            <option value="cm" >cm</option>
+            <option value="m" selected>m</option>
+            <option value="km">km</option>
+        </select>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
