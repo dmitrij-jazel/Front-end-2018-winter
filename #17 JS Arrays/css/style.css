@@ -1,0 +1,21 @@
+body{
+    background: url('../img/hip-square.png');
+}
+
+.container{
+    background: #fff;
+    border-radius: 6px;
+    margin-top:50px;
+}
+
+
+#myApp{
+    margin-top:30px;
+}
+
+
+#result{
+    background:lightgrey;
+    padding:15px 30px;
+    margin-top:30px;
+}
