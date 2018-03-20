@@ -1,4 +1,4 @@
-var array = [];
+var products = [];
 
 var prodInput = document.getElementById("prodInput");
 
@@ -7,17 +7,24 @@ function addProduct(){
     //console.log(prod);
 
     //prideti nauja produkta i arraju    
-    array.push(prod);
+    products.push(prod);
     
     //atvaizduoti masiva
-    printArray(array);
+    printArray(products);
 }
 
-function printArray(array){
+function removeProd(index){
+    //prideti nauja produkta is arrajaus  
+    products.splice(index, 1);
+    // atvaizduoti masiva
+    printArray(products);
+}
+
+function printArray(products){
     var h = "";
-    for(let i = 0; i<array.length;i++){
-        console.log(array[i]);
-        h = h + "<li>"+array[i]+"</li>";
-    } 
+    for(let i = 0; i<products.length;i++){
+        console.log(products[i]);
+        h = h + "<li>"+products[i]+"<button onclick='removeProd("+i+")'>X</button></li>";
+    }
     document.getElementById("result").innerHTML = h;
 }
