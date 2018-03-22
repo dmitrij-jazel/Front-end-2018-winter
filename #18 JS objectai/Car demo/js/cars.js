@@ -9,25 +9,34 @@ var engine_input = document.getElementById("Engine");
 
 function addCar(){
     console.log("pridedam: "+brand_input.value+" "+model_input.value);
+    let milege_number = Number(milage_input.value);
+    let year_number = Number(year_input.value);
+    let engine_number = Number(engine_input.value);
+    
     let newcar = {
         brand : brand_input.value,
-        model : model_input.value
-    };
+        model : model_input.value,
+        color : color_input.value,
+        milage : milege_number,
+        year: year_number,
+        engine: engine_number
 
+    };
     cars.push(newcar);
+
+    printCars(cars);
 }
 
-/*
-var car = {
-    brand:"Fiat",
-    model:"500",
-    color:"white",
-    milage: 100000,
-    year: 2005,
-    engine: 1.7,
+function removeCar(index){
+    console.log(index);
+    cars.splice(index,1);
+    printCars(cars);
+} 
 
-    print: function () {
-        console.log(this.brand + " sako labas");
-        //console.log(this.brand + " "+this.model+" pagaminta:"+this.year+" metais");
+function printCars(cars_array){
+    var h = "";
+    for(let i = 0; i<cars_array.length;i++){
+        h = h + "<li>"+cars_array[i].brand+" "+ cars_array[i].model +" "+ cars_array[i].year +"<button onclick='removeCar("+i+")'>X</button></li>";
     }
-};*/
+    document.getElementById("Result").innerHTML = h;
+}
