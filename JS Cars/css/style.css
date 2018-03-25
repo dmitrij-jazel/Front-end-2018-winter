@@ -1,0 +1,13 @@
+.specialFont{
+    font-family: 'Marvel', sans-serif;
+}
+
+#MyApp{
+    background: #fff;
+    border:1px solid #ddd;
+    padding:15px;
+}
+
+#AppWrap{
+
+}
