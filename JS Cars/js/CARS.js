@@ -149,7 +149,7 @@ const CARS =[
 		"seats":5,
 		"color":"Silver",
 		"mileage":258925,
-		"date": "208-08-25",
+		"date": "2008-08-25",
 		"power": 200
 	},{
 		"brand":"Fiat",
