@@ -11,3 +11,17 @@
 #AppWrap{
 
 }
+
+.car{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.img-wrap{
+    width:300px;
+}
+
+.img-wrap img{
+    width:100%;
+}
+

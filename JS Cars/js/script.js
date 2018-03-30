@@ -9,17 +9,58 @@ $(function() {
 
         // Filtruoti masinas
         cars_list = findCarsByBrand(cars_list, brand_from_input);
-                
-        // Surusiuot pagal kilometraza
+        
+        // Surusiuot pagal kilometraza        
+        cars_list.sort(function(a, b) {
+            return a.mileage - b.mileage;
+        });
+
         // Atvaizduoti filtravimo rezultatus (masinas)
         printCars(cars_list);
 
         // Rasti naujausia masina is filtravimo rezultatu
-
-        //atvaizduoti naujausia masina
+        let newestCar = findNewestCar(cars_list);
+        // atvaizduoti naujausia masina
+        printNewestCar(newestCar);
     });
     
 });
+
+function printNewestCar(newestCar){
+    let img_file_name = newestCar.brand.toLowerCase();
+    let h = `
+
+    <div class="car">
+        <div class="img-wrap">
+            <img src="img/${img_file_name}.png" />
+        </div>
+        <h4>${newestCar.brand} ${newestCar.model}</h4>
+        <table>
+            <tr><th>Seats</th><td>${newestCar.seats}</td></tr>
+            <tr><th>Color</th><td>${newestCar.color}</td></tr>
+            <tr><th>Mileage</th><td>${newestCar.mileage}</td></tr>
+            <tr><th>Power</th><td>${newestCar.power}</td></tr>
+        </table>
+        
+
+    <div>
+    `;
+    
+    document.getElementById("top_result").innerHTML = h;
+
+}
+
+function findNewestCar(array){
+    let newest_car = array[0];
+    // pereiti per visa masiva
+    for(let i = 0; i<array.length; i++){
+        // jeigu randam naujausia masina - grazinti ja
+        if(newest_car.mileage > array[i].mileage){
+            newest_car = array[i];
+        }
+    }
+    return newest_car;
+}
 
 
 function findCarsByBrand(array, brand_from_input){
@@ -44,9 +85,18 @@ function printCars(array){
         h = h + `
 
         <div class="car">
-        <img src="img/${img_file_name}.png" />
-            <p>${car.brand} <p>
-            <span>${car.seats}</span>
+            <div class="img-wrap">
+                <img src="img/${img_file_name}.png" />
+            </div>
+            <h4>${car.brand} ${car.model}</h4>
+            <table>
+                <tr><th>Seats</th><td>${car.seats}</td></tr>
+                <tr><th>Color</th><td>${car.color}</td></tr>
+                <tr><th>Mileage</th><td>${car.mileage}</td></tr>
+                <tr><th>Power</th><td>${car.power}</td></tr>
+            </table>
+            
+
         <div>
         `;
     }
