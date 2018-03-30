@@ -68,7 +68,11 @@ function findCarsByBrand(array, brand_from_input){
 
     for(let i = 0; i < array.length; i++){
         let car = array[i];
-        if(car.brand.toLowerCase() == brand_from_input.toLowerCase()){
+       
+        let brand = car.brand.toLowerCase();
+        let s = brand_from_input.toLowerCase();
+
+        if(brand.search(s) > -1){
             brandArray.push(car);
         }
     }
