@@ -1,27 +1,37 @@
 $(function() {
 
     $("#btn_search").click(function () {
+        $("#Brand").removeClass("is-invalid");
+        $("#brand-error-message").fadeOut('fast');
         //Nuskaityti kas yra irasyta filtruose        
         let brand_from_input = document.getElementById("Brand").value;
         let model_from_input = document.getElementById("Model").value;
+
+        if(brand_from_input.length){
+            // jeigu brand taisingas
+            let cars_list = CARS;
+
+            // Filtruoti masinas
+            cars_list = findCarsByBrand(cars_list, brand_from_input);
+            
+            // Surusiuot pagal kilometraza        
+            cars_list.sort(function(a, b) {
+                return a.mileage - b.mileage;
+            });
+
+            // Atvaizduoti filtravimo rezultatus (masinas)
+            printCars(cars_list);
+
+            // Rasti naujausia masina is filtravimo rezultatu
+            let newestCar = findNewestCar(cars_list);
+            // atvaizduoti naujausia masina
+            printNewestCar(newestCar);
+        }else{            
+            $("#Brand").addClass("is-invalid");
+            $("#brand-error-message").fadeIn('fast');
+        }
                 
-        let cars_list = CARS;
-
-        // Filtruoti masinas
-        cars_list = findCarsByBrand(cars_list, brand_from_input);
         
-        // Surusiuot pagal kilometraza        
-        cars_list.sort(function(a, b) {
-            return a.mileage - b.mileage;
-        });
-
-        // Atvaizduoti filtravimo rezultatus (masinas)
-        printCars(cars_list);
-
-        // Rasti naujausia masina is filtravimo rezultatu
-        let newestCar = findNewestCar(cars_list);
-        // atvaizduoti naujausia masina
-        printNewestCar(newestCar);
     });
     
 });
