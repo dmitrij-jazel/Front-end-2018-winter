@@ -1,0 +1,116 @@
+nav {
+    background:#333;
+    padding:15px 0px;
+}
+
+#first {
+    background: url('../img/water.jpg') 0 center;
+    background-size: cover;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#first h1{
+    font-family: 'Permanent Marker', cursive;
+    color:#fff;
+    font-size: 60px;
+}
+
+#first p{    
+    color:#fff;
+    font-size: 25px;
+}
+
+#first .BigInfo{
+    text-align: center;
+}
+
+nav ul a{
+    color:#FFF;
+    -webkit-transition: 1s; /* For Safari 3.1 to 6.0 */
+    transition: 1s;
+    border-bottom: 1px solid #333;
+    margin-right: 10px;
+}
+
+nav ul a:hover{
+    color:#fff;
+    text-decoration: underline;
+    border-bottom: 1px solid #FFF;
+
+    -webkit-transition: 1s; /* Safari */
+    transition: 1s;
+}
+
+#second{
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.info-box{    
+    min-height: 50px;
+    text-align: center;
+}
+
+.info-box .article-icon{
+    font-size: 80px;    
+    color:#28a745;
+}
+
+.info-box .article-heading{
+    font-size: 36px;    
+    color:#333;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.info-box .article-text{
+    font-size: 17px;    
+    color:#999;
+    padding:0px 50px;
+    min-height: 75px;
+}
+
+.article-link{
+    margin-top:15px;
+}
+
+#third{
+    background:url("../img/dark-triangles.png");
+}
+
+.form-header-text{
+    color:#fff;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 30px;
+}
+
+#contact_form{
+    padding-top:60px;
+    padding-bottom: 60px;
+}
+
+
+#googlemaps iframe{
+    width:100%;
+    display: block;
+}
+
+
+footer{
+    padding-top:60px;
+    
+    background: #000;
+    color:#fff;
+    padding-bottom: 60px;
+}
+
+.social-bar{
+    margin-bottom: 30px;
+}
+
+.social-bar a{
+    color:#fff;
+    font-size: 49px;
+    margin-left:15px;
+    margin-right: 15px;
+}

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div id="logo-wrap">
+                    <a href="index.html">
+                        <img src="http://via.placeholder.com/150x70?text=logo" />
+                    </a>
+                    
+                </div>
+
+                <div id="nav-wrap collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a href="aboutus.html" class="nav-link">About us</a></li>
+                        <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>    
+    
+    <main>
+        <section id="first">
+            <div class="container">
+                <div class="BigInfo">
+                    <h1>Welcome to our page!</h1>
+                    <p>Feel free to subscribe.</p>
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-lg" placeholder="Email..." >
+                                <div class="input-group-append">
+                                    <button class="btn btn-success" type="button"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;&nbsp;Button</button>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>                    
+                </div>
+            </div>           
+        </section>
+
+        <section id="second">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <article class="info-box">
+                            
+                            <div class="article-icon">
+                                <i class="fas fa-basketball-ball"></i>
+                            </div>
+                            <div class="article-heading">
+                                Krepsinis jega
+                            </div>
+                            <div class="article-text">
+                                Cia bus biski nedaug visai mazo smulkaus tekstuko, ir info apie krepsini.
+                            </div>
+                            <div class="article-link">
+                                <a href="#" class="btn btn-outline-success">Read more&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                        </article>
+                    </div>
+                    <div class="col-4">
+                            <article class="info-box">
+                            
+                                    <div class="article-icon">
+                                        <i class="fab fa-android"></i>
+                                    </div>
+                                    <div class="article-heading">
+                                        Android valdo
+                                    </div>
+                                    <div class="article-text">
+                                        Bet apple neatsilieka, visi telefonai geri, pakol veikia.
+                                    </div>
+                                    <div class="article-link">
+                                        <a href="http://www.delfi.lt" target="_blank" class="btn btn-outline-success">Read more&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+                                    </div>
+        
+                                </article>
+                    </div>
+                    <div class="col-4">
+                        <article class="info-box">                        
+                            <div class="article-icon">
+                                <i class="fab fa-fort-awesome"></i>
+                            </div>
+                            <div class="article-heading">
+                                Super mario
+                            </div>
+                            <div class="article-text">
+                                Kadaise buvo toks linksmas zaidimas, visiems patiko.
+                            </div>
+                            <div class="article-link">
+                                <a href="#" class="btn btn-outline-success">Read more&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+                            </div>    
+                        </article>
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+        <section id="third">
+            <div class="container">
+                <div id="contact_form">
+                    <form>
+                        <div class="row">
+                            <div class="col-6 offset-3">
+                                <!-- Kontaktine forma is CV template -->
+
+                                <div class="container container-bg-white text-center">
+                                    <h1 class="form-header-text">Parašykite mums laiškelį.</h1>
+                                    <div class="contact-form ">
+                                
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="firstname" value="" placeholder="Jusu vardas..." id="firstname" />  
+                                            <span id="firstname_error_msg"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="lastname" value="" placeholder="Jusu pavarde..." id="lastname" />
+                                            <span id="lastname_error_msg"></span>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="email" value="" placeholder="El. pastas" id="email" />
+                                            <span id="email_error_msg"></span>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="Message" value="" placeholder="Zinute" id="message" />
+                                            <span id="message_error_msg"></span>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <div class="">
+                                                <button onclick="send()" type="button" class="btn btn-success" ><i class="far fa-envelope"></i>&nbsp;&nbsp;&nbsp;Siusti zinute</button>
+                                            </div>                                            
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="googlemaps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2293.6564987491934!2d23.92790231600463!3d54.908951064220986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e7189a143e2eeb%3A0xdb0c64301b3f52cf!2sVerslo+centras+ARTIS!5e0!3m2!1sen!2slt!4v1522853264868" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="social-bar">
+                    <a href="https://www.facebook.com/codeacademy.lt/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/codecademy"  target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                    <a href="#"><i class="fab fa-snapchat-square"></i></a>
+                </div>
+                <div>
+                    Coryright CA &copy; 2018
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
